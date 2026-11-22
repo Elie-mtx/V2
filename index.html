@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="mg"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vola Chine</title>
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#14181f"><link rel="icon" href="icon-192.png">
+<style>
+:root{--bg:#f5f6f8;--sf:#fff;--tx:#14181f;--mu:#737b88;--bd:#e4e7ec;--ac:#14181f;--at:#fff;--hi:#d1342f;--ok:#12805c;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0f13;--sf:#15181e;--tx:#eef0f3;--mu:#8a92a0;--bd:#252932;--ac:#eef0f3;--at:#14181f;--hi:#ff6b5e;--ok:#3ddc97;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:760px;margin:auto;padding:20px 16px 40px}
+header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+h1{font-size:22px;letter-spacing:-.02em;margin:0;font-weight:700}
+nav{display:flex;border-bottom:1px solid var(--bd);margin-bottom:20px;gap:22px}
+nav button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 0;color:var(--mu);font:inherit;font-weight:600;cursor:pointer;margin-bottom:-1px}
+nav button.on{color:var(--tx);border-color:var(--hi)}
+.box{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:18px;margin-bottom:14px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+label{display:block;font-size:12.5px;color:var(--mu);margin-bottom:4px}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--hi);outline-offset:1px}
+.b{padding:11px 18px;border:0;border-radius:10px;background:var(--ac);color:var(--at);font:inherit;font-weight:600;cursor:pointer}
+.b.l{background:transparent;color:var(--tx);border:1px solid var(--bd)}.b.s{padding:6px 12px;font-size:13px}.b.d{background:transparent;color:var(--hi);border:1px solid var(--bd)}
+.ph{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.pic{width:84px;height:84px;border-radius:12px;border:1px dashed var(--bd);display:grid;place-items:center;overflow:hidden;color:var(--mu);font-size:12px;text-align:center;cursor:pointer;flex:none;background:var(--bg)}
+.pic img{width:100%;height:100%;object-fit:cover}
+.mu{color:var(--mu);font-size:13px}.hide{display:none!important}
+.sm{margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);display:flex;gap:18px;flex-wrap:wrap}
+.sm div span{display:block;font-size:12px;color:var(--mu)}.sm b{font-size:16px}
+.it{display:flex;gap:12px}.it img,.it .nb{width:56px;height:56px;border-radius:10px;object-fit:cover;background:var(--bg);flex:none}
+.it .in{flex:1;min-width:0}.rw{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tg{font-size:12px;font-weight:600;color:var(--mu)}.tg.ok{color:var(--ok)}.tg.hi{color:var(--hi)}
+.ac{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.bar{height:8px;border-radius:99px;background:var(--bd);margin:6px 0 16px;overflow:hidden}.bar i{display:block;height:100%;border-radius:99px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:14px}.kp .box{margin:0}.kp b{font-size:21px;letter-spacing:-.02em}
+table{width:100%;border-collapse:collapse}th,td{padding:9px 6px;border-bottom:1px solid var(--bd);text-align:left}.n{text-align:right}.tb{overflow-x:auto}
+td img{width:38px;height:38px;border-radius:6px;object-fit:cover;vertical-align:middle;margin-right:8px}
+@media print{body{background:#fff;color:#000}header,nav,.np{display:none!important}.box{border:0;padding:0}}
+</style></head><body><main>
+<header><h1>Vola Chine</h1><span class="mu">1 ¥ = <span id="tt"></span> Ar</span></header>
+<nav class="np"><button data-t="cmd" class="on">Commande</button><button data-t="dev">Devis</button><button data-t="dash">Tombony</button><button data-t="set">Réglages</button></nav>
+
+<section id="cmd">
+<div class="box"><b id="ft">Commande vaovao</b>
+<div class="ph" style="margin-top:12px"><label class="pic" for="im" id="pc0"><img id="pi" class="hide" alt=""><span id="pt">+ Sary</span></label><input id="im" type="file" accept="image/*" class="hide">
+<div style="flex:1"><button class="b l s" id="ia" type="button">✨ Estimer avec IA</button><div class="mu" id="st" style="margin-top:6px">Ampidiro ny sary dia tsindrio ny Estimer.</div></div></div>
+<div class="g">
+<div><label>Mpanjifa</label><input id="cl"></div>
+<div><label>Entana</label><input id="pr"></div>
+<div><label>Isa</label><input id="qt" type="number" value="1" min="1"></div>
+<div><label>Prix Chine /unité (¥)</label><input id="px" type="number" min="0" step="any"></div>
+<div><label>Pourcentage (%)</label><input id="pc" type="number" min="0" value="40"></div>
+<div><label>Mode d’envoi</label><select id="md"><option value="n">Aérien normal</option><option value="e">Express</option><option value="b">Batterie</option><option value="m">Maritime</option></select></div>
+<div id="wtw"><label>Poids /unité (kg)</label><input id="wt" type="number" min="0" step="any"></div>
+<div id="vow" class="hide"><label>Volume /unité (m³)</label><input id="vo" type="number" min="0" step="any"></div>
+<div><label>Frais d’envoi (Ar)</label><input id="fr" type="number" min="0" value="0"></div>
+</div>
+<div class="sm" id="pv"></div>
+<div class="ac"><button class="b" id="sv">Tehirizina</button><button class="b l hide" id="cn">Foana</button></div></div>
+<div id="list"></div>
+</section>
+
+<section id="dev" class="hide">
+<div class="box np"><label>Mpanjifa</label><select id="dc"></select><div class="ac"><button class="b" onclick="window.print()">Alefa / PDF</button></div></div>
+<div class="box" id="dv"></div>
+</section>
+
+<section id="dash" class="hide"></section>
+
+<section id="set" class="hide"><div class="box">
+<b>Gemini (IA)</b><p class="mu" style="margin:4px 0 12px">Clé API an’i Google AI Studio. Tehirizina ao amin’ny telefaonina ihany. Mila internet ny estimation.</p>
+<div class="g"><div><label>Clé API</label><input id="ky" type="password" autocomplete="off"></div><div><label>Modèle</label><input id="mo"></div></div></div>
+<div class="box"><b>Taux sy tarif</b>
+<div class="g" style="margin-top:12px"><div><label>Taux (Ar par ¥)</label><input id="s_tx" type="number" step="any"></div><div><label>Aérien normal (Ar/kg)</label><input id="s_n" type="number"></div><div><label>Express (Ar/kg)</label><input id="s_e" type="number"></div><div><label>Batterie (Ar/kg)</label><input id="s_b" type="number"></div><div><label>Maritime (Ar/m³)</label><input id="s_m" type="number"></div></div>
+<div class="ac"><button class="b" id="ss">Tehirizina</button><span class="mu" id="so"></span></div></div></section>
+</main>
+<script>
+var $=function(i){return document.getElementById(i)},S=[],ed=null,IMG=null;
+var C={tx:732,key:"",model:"gemini-2.5-flash",n:77000,e:87000,b:90000,m:2670000};
+var MD={n:"Aérien normal",e:"Express",b:"Batterie",m:"Maritime"};
+try{S=JSON.parse(localStorage.getItem("vc")||"[]");Object.assign(C,JSON.parse(localStorage.getItem("vc_cfg")||"{}"))}catch(e){}
+function save(){try{localStorage.setItem("vc",JSON.stringify(S))}catch(e){alert("Feno ny fitadidiana. Fafana ny commande taloha.")}}
+function f(n){return Math.round(n).toLocaleString("fr-FR").replace(/[\u202f\u00a0]/g," ")+" Ar"}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function rd(){return{qt:+$("qt").value||0,px:+$("px").value||0,fr:+$("fr").value||0,pc:+$("pc").value||0,md:$("md").value,wt:+$("wt").value||0,vo:+$("vo").value||0}}
+function calc(o){var b=o.qt*o.px*(o.tx||1),m=b*o.pc/100,pr=b+m,v=pr+o.fr;return{b:b,prod:pr,m:m,v:v,c:b+o.fr,p:o.paid||0,r:v-(o.paid||0)}}
+function unit(){var m=$("md").value=="m";$("wtw").classList.toggle("hide",m);$("vow").classList.toggle("hide",!m)}
+function auto(){var d=rd();$("fr").value=Math.round(d.md=="m"?d.vo*d.qt*C.m:d.wt*d.qt*C[d.md]);pv()}
+function pv(){var o=rd();o.tx=ed!==null?(S.find(function(x){return x.id==ed})||{}).tx||C.tx:C.tx;var k=calc(o);
+ $("pv").innerHTML=[["Entana tonga eto",k.b],["Frais",o.fr],["Tombony",k.m],["Vidiny amidy",k.v]].map(function(a){return "<div><span>"+a[0]+"</span><b>"+f(a[1])+"</b></div>"}).join("")}
+["qt","md","wt","vo"].forEach(function(i){$(i).oninput=function(){unit();auto()}});
+["px","pc","fr"].forEach(function(i){$(i).oninput=pv});
+function sc(i,m,q){var s=Math.min(1,m/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=i.width*s;c.height=i.height*s;c.getContext("2d").drawImage(i,0,0,c.width,c.height);return c.toDataURL("image/jpeg",q)}
+$("im").onchange=function(){var fl=this.files[0];if(!fl)return;var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){IMG={big:sc(i,900,.8),th:sc(i,320,.7)};shp(IMG.th)};i.src=r.result};r.readAsDataURL(fl)};
+function shp(s){$("pi").src=s||"";$("pi").classList.toggle("hide",!s);$("pt").classList.toggle("hide",!!s)}
+$("ia").onclick=async function(){
+ if(!IMG)return alert("Ampidiro aloha ny sary.");
+ if(!C.key){alert("Ampidiro ao amin’ny Réglages ny clé API Gemini.");return}
+ var st=$("st");st.textContent="Mamakafaka ny sary…";
+ var p="Tu es expert en import Chine vers Madagascar. Voici la photo d’un produit"+($("pr").value?" ("+$("pr").value+")":"")+". Estime pour UNE unité emballée pour l’expédition: le poids en kg et le volume en m3. Indique si le produit contient une batterie ou du lithium. Réponds uniquement en JSON: {\"nom\":string,\"poids_kg\":number,\"volume_m3\":number,\"batterie\":boolean,\"raison\":string courte en malgache}";
+ try{var r=await fetch("https://generativelanguage.googleapis.com/v1beta/models/"+encodeURIComponent(C.model)+":generateContent?key="+encodeURIComponent(C.key),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:p},{inline_data:{mime_type:"image/jpeg",data:IMG.big.split(",")[1]}}]}],generationConfig:{responseMimeType:"application/json"}})});
+ var j=await r.json();if(!r.ok)throw new Error(j.error&&j.error.message||r.status);
+ var a=JSON.parse(j.candidates[0].content.parts[0].text.replace(/```json|```/g,"").trim());
+ if(!$("pr").value&&a.nom)$("pr").value=a.nom;
+ $("wt").value=a.poids_kg;$("vo").value=a.volume_m3;
+ if(a.batterie&&$("md").value!="m")$("md").value="b";
+ unit();auto();st.textContent="Estimation: "+(a.batterie?"misy batterie. ":"")+(a.raison||"")+" Azonao ovaina ny isa.";
+ }catch(e){st.textContent="Tsy nahomby: "+e.message}};
+$("sv").onclick=function(){var d=rd();d.cl=$("cl").value.trim()||"Tsy fantatra";d.pr=$("pr").value.trim()||"Entana";
+ if(ed!==null){var o=S.find(function(x){return x.id==ed});d.img=IMG?IMG.th:o.img;Object.assign(o,d)}
+ else{d.id=Date.now();d.st="Commandé";d.paid=0;d.tx=C.tx;d.img=IMG?IMG.th:"";S.unshift(d)}
+ save();clr();draw()};
+function clr(){ed=null;IMG=null;shp("");["cl","pr","px","wt","vo"].forEach(function(i){$(i).value=""});$("qt").value=1;$("fr").value=0;$("pc").value=40;$("md").value="n";$("cn").classList.add("hide");$("ft").textContent="Commande vaovao";$("st").textContent="Ampidiro ny sary dia tsindrio ny Estimer.";unit();pv()}
+$("cn").onclick=clr;
+function draw(){
+ $("list").innerHTML=S.length?S.map(function(o){var k=calc(o);return '<div class="box"><div class="it">'+(o.img?'<img src="'+o.img+'" alt="">':'<div class="nb"></div>')+'<div class="in"><div class="rw"><b>'+esc(o.pr)+' ×'+o.qt+'</b><span class="tg '+(o.st=="Arrivé"?"ok":"")+'">'+(o.st=="Arrivé"?"Tonga":"Commandé")+' · <span class="'+(k.r<=0?"ok":"hi")+'">'+(k.r<=0?"Voaloa":"Misy sisa")+'</span></span></div><div class="mu">'+esc(o.cl)+' · '+o.pc+'% · '+(MD[o.md]||"")+'</div></div></div><div class="sm"><div><span>Amidy</span><b>'+f(k.v)+'</b></div><div><span>Voaloa</span><b>'+f(k.p)+'</b></div><div><span>Sisa</span><b>'+f(k.r)+'</b></div><div><span>Tombony</span><b>'+f(k.m)+'</b></div></div><div class="ac"><button class="b s" onclick="pay('+o.id+')">+ Paiement</button><button class="b s l" onclick="arr('+o.id+')">'+(o.st=="Arrivé"?"Tsy tonga":"Tonga")+'</button><button class="b s l" onclick="edit('+o.id+')">Ovaina</button><button class="b s d" onclick="del('+o.id+')">Fafana</button></div></div>'}).join(""):'<p class="mu">Mbola tsy misy commande.</p>';
+ var cur=$("dc").value;$("dc").innerHTML=[...new Set(S.map(function(o){return o.cl}))].map(function(c){return "<option"+(c==cur?" selected":"")+">"+esc(c)+"</option>"}).join("");devis();dash()}
+window.pay=function(id){var o=S.find(function(x){return x.id==id}),a=+prompt("Vola voaloa (Ar):");if(a>0){o.paid=(o.paid||0)+a;save();draw()}};
+window.arr=function(id){var o=S.find(function(x){return x.id==id});o.st=o.st=="Arrivé"?"Commandé":"Arrivé";save();draw()};
+window.del=function(id){if(confirm("Fafana ve?")){S=S.filter(function(x){return x.id!=id});save();draw()}};
+window.edit=function(id){var o=S.find(function(x){return x.id==id});ed=id;IMG=null;shp(o.img);["cl","pr","qt","px","fr","pc","md","wt","vo"].forEach(function(i){$(i).value=o[i]||(i=="fr"?0:"")});unit();$("cn").classList.remove("hide");$("ft").textContent="Ovaina";pv();window.scrollTo(0,0)};
+function devis(){var c=$("dc").value,L=S.filter(function(o){return o.cl==c});if(!L.length){$("dv").innerHTML='<span class="mu">Mbola tsy misy devis.</span>';return}
+ var t=0,fr=0,rows=L.map(function(o){var v=calc(o).prod;t+=v;fr+=o.fr;return "<tr><td>"+(o.img?'<img src="'+o.img+'" alt="">':"")+esc(o.pr)+'</td><td class="n">'+o.qt+'</td><td class="n">'+f(v/o.qt)+'</td><td class="n">'+f(v)+"</td></tr>"}).join("");
+ $("dv").innerHTML="<h2 style='margin:0'>Devis</h2><div class='mu'>"+new Date().toLocaleDateString("fr-FR")+" · "+esc(c)+"</div><div class='tb'><table style='margin-top:14px'><tr><th>Entana</th><th class='n'>Isa</th><th class='n'>P.U.</th><th class='n'>Total</th></tr>"+rows+"<tr><td colspan='3' class='n'>Frais d’envoi</td><td class='n'>"+f(fr)+"</td></tr><tr><td colspan='3' class='n'><b>TOTAL</b></td><td class='n'><b>"+f(t+fr)+"</b></td></tr></table></div>"}
+$("dc").onchange=devis;
+function dash(){var A={c:0,v:0,p:0,m:0,ar:0,pm:0};S.forEach(function(o){var k=calc(o);A.c+=k.c;A.v+=k.v;A.p+=k.p;A.m+=k.m;if(o.st=="Arrivé")A.ar++;A.pm+=k.v?k.m*Math.min(k.p,k.v)/k.v:0});
+ var mx=Math.max(A.v,1),b=function(l,v,col){return '<div class="rw"><span class="mu">'+l+'</span><b>'+f(v)+'</b></div><div class="bar"><i style="width:'+Math.min(100,v/mx*100)+'%;background:'+col+'"></i></div>'};
+ $("dash").innerHTML='<div class="kp"><div class="box"><span class="mu">Commande</span><br><b>'+S.length+'</b></div><div class="box"><span class="mu">Tonga</span><br><b>'+A.ar+'/'+S.length+'</b></div><div class="box"><span class="mu">Tombony tanteraka</span><br><b>'+f(A.m)+'</b></div><div class="box"><span class="mu">Tombony azo</span><br><b>'+f(A.pm)+'</b></div></div><div class="box">'+b("Vidin’ny Chine + frais",A.c,"var(--mu)")+b("Vola amidy",A.v,"var(--tx)")+b("Vola voaloa",A.p,"var(--ok)")+b("Sisa tsy voaloa",A.v-A.p,"var(--hi)")+'</div>'}
+function ldS(){$("ky").value=C.key;$("mo").value=C.model;["tx","n","e","b","m"].forEach(function(k){$("s_"+k).value=C[k]});$("tt").textContent=C.tx}
+$("ss").onclick=function(){C.key=$("ky").value.trim();C.model=$("mo").value.trim()||"gemini-2.5-flash";["tx","n","e","b","m"].forEach(function(k){C[k]=+$("s_"+k).value||C[k]});try{localStorage.setItem("vc_cfg",JSON.stringify(C))}catch(e){}ldS();$("so").textContent="Voatahiry ✓"};
+var NB=document.querySelectorAll("nav button");NB.forEach(function(B){B.onclick=function(){NB.forEach(function(x){x.classList.toggle("on",x==B)});["cmd","dev","dash","set"].forEach(function(s){$(s).classList.toggle("hide",s!=B.dataset.t)})}});
+ldS();unit();pv();draw();
+if("serviceWorker" in navigator){try{navigator.serviceWorker.register("sw.js")}catch(e){}}
+</script></body></html>
